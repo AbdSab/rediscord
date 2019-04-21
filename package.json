@@ -1,24 +1,34 @@
 {
   "name": "discord-bot-team-maker",
   "version": "1.0.0",
-  "description": "",
-  "main": "lib/index.js",
+  "description": "Another discord bot XD",
+  "main": "lib/index",
+  "type": "lib/index",
   "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AbdSab/discord-bot-team-maker.git"
   },
-  "author": "",
+  "author": "Firyox (AbdSab)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AbdSab/discord-bot-team-maker/issues"
   },
   "homepage": "https://github.com/AbdSab/discord-bot-team-maker#readme",
   "devDependencies": {
+    "@types/node": "^11.13.6",
     "nodemon": "^1.18.11",
-    "tslint": "^5.16.0",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
+  },
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.16"
   }
 }
