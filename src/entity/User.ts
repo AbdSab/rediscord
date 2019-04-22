@@ -10,13 +10,12 @@ export class User{
     @Column()
     uid: string;
 
-    @Column()
-    username: string;
-
     @ManyToMany(type => Team, team => team.users)
     teams: Team[];
 
     @ManyToMany(type => Guild, guild => guild.users)
     guilds: Guild[];
+
+    data: User
 
 }
