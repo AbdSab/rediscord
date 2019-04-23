@@ -1,7 +1,10 @@
 import ICommand from './ICommand';
 import HiCommand from './HiCommand';
 //TODO: Change index structure;
-let commands:ICommand[] = [];
+class commandMap{
+    [commandName: string]: string;
+}
+const commands:ICommand[] = [];
 
 commands.push(new HiCommand());
 

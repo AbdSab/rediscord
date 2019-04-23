@@ -4,7 +4,7 @@ import GuildMemberAddEvent from './GuildMemberAddEvent';
 import ReadyEvent from './ReadyEvent';
 import JoinGuildEvent from "./JoinGuildEvent";
 
-let events:IEvent[] = [];
+const events:IEvent[] = [];
 
 events.push(new ReadyEvent());
 events.push(new GuildMemberAddEvent());
