@@ -1,5 +1,5 @@
 
-export default class Message{
+export default class MessageHelper{
     message: string;
     public constructor(message: string){
         this.message = message;

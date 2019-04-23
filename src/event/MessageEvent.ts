@@ -1,15 +1,14 @@
 import IEvent from './IEvent';
-import IMiddleware from '../middleware/IMiddleware';
-import Message from '../class/Message';
+import MessageHelper from '../helper/MessageHelper';
 import commands from '../command';
 
 export default class MessageEvent implements IEvent {
     readonly name: string = "message";
-    execute(arg:any){
-         const message: Message = new Message(arg);
+    execute(source:any){
+         const message: MessageHelper = new MessageHelper(source.content);
          commands.forEach(command => {
             if(command.name === message.getCommand()){
-                command.execute(message.getArgs());
+                command.execute(source, message.getArgs());
             }
          })
     }
