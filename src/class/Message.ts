@@ -1,4 +1,3 @@
-import {ICommand} from '../command/ICommand';
 
 export default class Message{
     message: string;

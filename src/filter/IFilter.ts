@@ -1,5 +1,6 @@
-import {Message} from 'discord.js';
+import ICommand from "../command/ICommand";
 
-export interface IFilter{
-    filter(message: Message): Message;
+export default interface IFilter{
+    process(command: ICommand);
+    next(request, response);
 }

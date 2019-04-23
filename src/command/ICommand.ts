@@ -1,5 +1,7 @@
+import { Message } from "discord.js";
 
-export interface ICommand{
+export default interface ICommand{
     name: string;
-    execute(message: string, ...args: any);
+    message: Message;
+    execute(args: string[]);
 }
