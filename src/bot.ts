@@ -18,8 +18,8 @@ export class Bot{
     }
 
     public events(){
-        events.forEach(e => {
-            this.client.on(e.name, async (arg)=>{e.execute(arg)})
+        events.forEach(event => {
+            this.client.on(event.name, async source=>{event.execute(source)})
         });
     }
 

@@ -1,8 +1,8 @@
 import ICommand from './ICommand';
-import Hi from './Hi';
-
+import HiCommand from './HiCommand';
+//TODO: Change index structure;
 let commands:ICommand[] = [];
 
-commands.push(new Hi());
+commands.push(new HiCommand());
 
 export default commands;

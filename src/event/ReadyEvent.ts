@@ -1,8 +1,8 @@
 import IEvent from './IEvent';
 
-export default class Ready implements IEvent{
+export default class ReadyEvent implements IEvent{
     readonly name: string = "ready";
-    execute(arg:any){
+    async execute(arg:any){
         console.log("Bot started and ready");
     }
 }
