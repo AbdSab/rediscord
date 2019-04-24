@@ -12,8 +12,8 @@ export class Bot{
     }
 
     async start(){
-        this.events();
-        this.client.login(config.token);
+        this.events().catch(err=>console.log(err));
+        this.client.login(config.token).catch(err=>console.log(err));
     }
 
     async events(){
