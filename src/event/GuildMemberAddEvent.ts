@@ -2,7 +2,7 @@ import IEvent from "./IEvent";
 
 export default class GuildMemberAddEvent implements IEvent{
     name: string = "guildMemberAdd";
-    async execute(arg:any) {
+    async execute(source:any) {
         //Execute code//
     }
 }

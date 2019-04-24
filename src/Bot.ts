@@ -1,6 +1,5 @@
 import Discord, { Client } from 'discord.js';
-import config from '../config.json';
-
+import config from './config.json';
 import events from './event';
 
 export class Bot{
@@ -12,14 +11,16 @@ export class Bot{
         this.client = new Discord.Client();
     }
 
-    public start(){
-        this.client.login(config.token);
+    async start(){
         this.events();
+        this.client.login(config.token);
     }
 
-    public events(){
-        events.forEach(event => {
-            this.client.on(event.name, async source=>{event.execute(source)})
+    async events(){
+        events.forEach((event, eventName) => {
+            this.client.on(eventName, source=>{
+                event.execute(source);
+            });
         });
     }
 

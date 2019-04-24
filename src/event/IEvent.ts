@@ -1,4 +1,4 @@
 export default interface IEvent{
     readonly name: string;
-    execute(arg:any): void;
+    execute(source:any): void;
 }

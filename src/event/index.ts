@@ -4,11 +4,11 @@ import GuildMemberAddEvent from './GuildMemberAddEvent';
 import ReadyEvent from './ReadyEvent';
 import JoinGuildEvent from "./JoinGuildEvent";
 
-const events:IEvent[] = [];
+const events:Map<string, IEvent> = new Map();
 
-events.push(new ReadyEvent());
-events.push(new GuildMemberAddEvent());
-events.push(new JoinGuildEvent());
-events.push(new MessageEvent());
+events.set("ready", new ReadyEvent());
+events.set("guildMemberAdd", new GuildMemberAddEvent());
+events.set("guildCreate", new JoinGuildEvent());
+events.set("message", new MessageEvent());
 
 export default events;
