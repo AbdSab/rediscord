@@ -16,6 +16,4 @@ export class User{
     @ManyToMany(type => Guild, guild => guild.users)
     guilds: Guild[];
 
-    data: User
-
 }
