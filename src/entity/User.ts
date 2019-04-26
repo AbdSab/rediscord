@@ -1,9 +1,9 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne, BaseEntity} from "typeorm";
 import {Team} from "./Team";
 import { Guild } from "./Guild";
 
 @Entity()
-export class User{
+export class User extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 

@@ -5,9 +5,9 @@ import config from "./config.json";
 
 const bot = new Bot(config.token);
 
-
 createConnection().then(connection => {
-    bot.start();
+    console.log("Connected to database");
+    bot.start().catch(err=>console.log(err));
 }).catch(error => {
     console.log(error);
 });

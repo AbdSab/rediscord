@@ -5,7 +5,7 @@
     "username": "root",
     "password": "",
     "database": "db_team_maker",
-    "synchronize": false,
+    "synchronize": true,
     "logging": false,
     "entities": [
        "src/entity/**/*.ts"

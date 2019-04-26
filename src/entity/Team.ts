@@ -1,10 +1,10 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, ManyToOne} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, ManyToOne, BaseEntity} from "typeorm";
 import { User } from "./User";
 import { Type } from "./Type";
 import { Guild } from "./Guild";
 
 @Entity()
-export class Team {
+export class Team extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -18,6 +18,6 @@ export class Team {
     @JoinTable()
     users: User[];
 
-    @ManyToMany(type => Guild, guild => guild.teams)
-    guilds: Guild[];
+    @ManyToOne(type => Guild, guild => guild.teams)
+    guild: Guild;
 }

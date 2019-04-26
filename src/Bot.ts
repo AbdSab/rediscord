@@ -12,6 +12,7 @@ export class Bot{
     }
 
     async start(){
+        console.log("Starting ...");
         this.events().catch(err=>console.log(err));
         this.client.login(config.token).catch(err=>console.log(err));
     }
@@ -19,7 +20,7 @@ export class Bot{
     async events(){
         events.forEach((event, eventName) => {
             this.client.on(eventName, source=>{
-                event.execute(source);
+                event.execute(this.client, source);
             });
         });
     }

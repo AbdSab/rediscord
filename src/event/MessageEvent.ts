@@ -3,10 +3,11 @@ import MessageHelper from '../helper/MessageHelper';
 import commands from '../command';
 import config from '../config.json';
 import FilterChain from "../filter/FilterChain";
+import {Client} from "discord.js";
 
 export default class MessageEvent implements IEvent {
     readonly name: string = "message";
-    async execute(source:any){
+    async execute(client:Client, source:any){
         const message: MessageHelper = new MessageHelper(source.content);
         if(message.prefix === config.prefix){
             if(commands.has(message.command)){

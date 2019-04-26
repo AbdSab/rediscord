@@ -1,16 +1,19 @@
 import ICommand from "../command/ICommand";
 import IFilter from "./IFilter";
-import filters from "./index";
+import {filters, defaultFilters } from "./index";
 
 export default class FilterChain{
     private filters: IFilter[] = [];
     private command: ICommand;
 
     public constructor(filtersNames: string[]){
+        defaultFilters.forEach(filter => {
+            this.addFilter(filter);
+        });
         filtersNames.forEach(filterName => {
             if(filters.get(filterName))
                 this.addFilter(filters.get(filterName));
-        })
+        });
     }
     private addFilter(filter: IFilter){
         this.filters.push(filter);
