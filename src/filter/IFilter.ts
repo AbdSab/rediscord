@@ -2,5 +2,5 @@ import ICommand from "../command/ICommand";
 
 export default interface IFilter{
     name: string;
-    process(source, command);
+    process(source, args);
 }

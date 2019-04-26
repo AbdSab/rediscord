@@ -2,9 +2,9 @@ import ICommand from './ICommand';
 
 export default class HiCommand implements ICommand{
     name: string = "hello";
-    filters: string[];
+    filters: string[] = ["isBot"];
 
     async execute(source:any, args: string[]){
-        source.channel.send(`Hello <@${source.author.id}>`).catch(err=>console.log(err));
+        source.channel.send(`.tm hello Hello <@${source.author.id}>`).catch(err=>console.log(err));
     }
 }

@@ -1,13 +1,9 @@
-import IFitler from './IFilter';
-import ICommand from "../command/ICommand";
+import IFilter from './IFilter';
 
-export default class IsBotFilter implements IFitler{
+export default class IsBotFilter implements IFilter{
     name: string = "isBot";
-    process(source, command){
-        if(source.author.bot){
-            source.channel.reply(`You are a bot, no command execution for you`);
-            return false;
-        }
-        return true;
+    process({author}, command){
+        console.log(command);
+        return !author.bot;
     };
 }
