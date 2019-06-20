@@ -4,7 +4,7 @@
     "port": 3306,
     "username": "root",
     "password": "",
-    "database": "db_team_maker",
+    "database": "db_rediscord",
     "synchronize": true,
     "logging": false,
     "entities": [

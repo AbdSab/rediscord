@@ -8,6 +8,6 @@ import HiCommand from './HiCommand';
  */
 const commands:Map<string ,ICommand> = new Map();
 
-commands.set("hello", new HiCommand());
+commands.set("hi", new HiCommand());
 
 export default commands;

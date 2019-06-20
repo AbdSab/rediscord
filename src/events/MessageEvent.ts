@@ -1,7 +1,7 @@
 import IEvent from './IEvent';
 import MessageHelper from '../helper/MessageHelper';
 import commands from '../commands';
-import config from '../../config.json';
+import config from '../config.json';
 import FilterChain from "../filter/FilterChain";
 import {Client} from "discord.js";
 

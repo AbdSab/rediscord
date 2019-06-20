@@ -1,7 +1,7 @@
 import ICommand from './ICommand';
 
 export default class HiCommand implements ICommand{
-    name: string = "hello";
+    name: string = "hi";
     filters: string[] = [];
 
     async execute(source:any, args: string[]){
