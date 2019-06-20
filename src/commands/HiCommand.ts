@@ -1,5 +1,9 @@
 import ICommand from './ICommand';
 
+/**
+ * An example command.
+ * The bot will salute to the person who say hello to it.
+ */
 export default class HiCommand implements ICommand{
     name: string = "hi";
     filters: string[] = [];
