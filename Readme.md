@@ -1,10 +1,10 @@
-#Rediscord
-######Rediscord is a mini framework based on Discord.js built with Typescript.
+# Rediscord
+###### Rediscord is a mini framework based on Discord.js built with Typescript.
 With Rediscord you can create easily command add filters edit events and make so much awesome things easily.  
 It is based also on the Typeorm which make managing the database very easy.  
 The architecture is very similiar to an MVC, You have commands as controller, models and view is the bot's response.
 
-#Installation
+# Installation
 To use this framework you only need first to clone the project, and install the packages.
 ```shell
 git clone https://github.com/AbdSab/rediscord
@@ -39,13 +39,13 @@ As for ormconfig.json, you need to provide your database info.
  }
 ```
 
-#Usage
+# Usage
 After installing, your bot should be working well and ready to be developed.
 
-####Add command
+#### Add command
 To create a command you simply need to create a class in commands folder that implements ICommand interface.
 To activate the command you will have to attach it to commands map in commands/index.ts
-#####Example
+##### Example
 First create a .ts file in commands, HiCommand.ts :
 ```typescript
 import ICommand from './ICommand';
