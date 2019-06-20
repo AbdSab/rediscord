@@ -1,7 +1,9 @@
 import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne, BaseEntity} from "typeorm";
-import {Team} from "./Team";
 import { Guild } from "./Guild";
 
+/**
+ * User entity to store users.
+ */
 @Entity()
 export class User extends BaseEntity{
     @PrimaryGeneratedColumn()
@@ -9,9 +11,6 @@ export class User extends BaseEntity{
 
     @Column()
     uid: string;
-
-    @ManyToMany(type => Team, team => team.users)
-    teams: Team[];
 
     @ManyToMany(type => Guild, guild => guild.users)
     guilds: Guild[];

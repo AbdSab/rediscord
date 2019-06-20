@@ -3,6 +3,11 @@ import HiCommand from './HiCommand';
 import CreateTeamCommand from "./CreateTeamCommand";
 import ShowTeamCommand from "./ShowTeamCommand";
 
+/**
+ * List of commands.
+ * @remark
+ * Add your commands you want to be executed to the list.
+ */
 const commands:Map<string ,ICommand> = new Map();
 
 commands.set("hello", new HiCommand());
