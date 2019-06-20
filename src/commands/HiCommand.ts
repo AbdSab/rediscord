@@ -5,7 +5,7 @@ export default class HiCommand implements ICommand{
     filters: string[] = [];
 
     async execute(source:any, args: string[]){
-        source.channel.send(`.tm hello Hello <@${source.author.id}>`)
+        source.channel.send(`Hello <@${source.author.id}>`)
             .catch(err=>console.log(err));
     }
 }

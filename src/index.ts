@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import {createConnection} from "typeorm";
 import {Bot} from './Bot';
 import config from "../config.json";
